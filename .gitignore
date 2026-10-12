@@ -1,0 +1,38 @@
+# 构建产物
+target/
+build/
+out/
+bin/
+*.class
+*.jar
+!maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.code-workspace
+.settings/
+.project
+.classpath
+nbproject/
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志与临时文件
+*.log
+*.tmp
+*.bak
+*~
+
+# 本地环境与密钥 —— ⚠️ 绝对不要提交
+.env
+.env.*
+*.local
+secrets.*
+application-local.*
