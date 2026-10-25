@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+JAR="$DIR/target/jpi.jar"
+
+if [ ! -f "$JAR" ]; then
+  echo "jpi.jar 不存在。请先构建：" >&2
+  echo "  mvn -f \"$DIR/pom.xml\" package" >&2
+  exit 1
+fi
+
+exec java -jar "$JAR" "$@"
